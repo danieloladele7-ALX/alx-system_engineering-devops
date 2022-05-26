@@ -1,4 +1,4 @@
-# Project_0: Bash shell commands
+# Bash_Project: Shell commands
 
 This project folder contains some fundamental bash scripts that can be executed directly on the terminal.
 
