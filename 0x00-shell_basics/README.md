@@ -68,5 +68,5 @@ A script ``103-commas`` with a command that lists all the files and directories 
     + You can assume that all the files we will test with will have at least one letter or one digit
     + The listing should end with a new line.
 
-19. __File type: School__
+19. __File type: School -__
 A magic file ``school.mgc`` that can be used with the command file to detect `School data` files. `School data` files always contain the string `SCHOOL` at offset 0.
