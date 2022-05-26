@@ -4,16 +4,16 @@ This project folder contains bash scripts with commands that can be executed dir
 
 __Note:__ To make a script executable you would need to use the ``chmod u+x <bash_script>``. To make magic file executable you need to use the ``file -C -m <magic_file>``
 
-0. __Where am I?__ A script ``0-current_working_directory`` to prints the absolute path name of the current working directory.
+0. __`0-current_working_directory`__ A script to prints the absolute path name of the current working directory.
 
-1. __What’s in there?__
-A script ``1-listit`` to display the contents list of your current directory.
+1. __`1-listit`__
+A script to display the contents list of your current directory.
 
-2. __There is no place like home:__
-A script ``2-bring_me_home`` that changes the working directory to the user’s home directory
+2. __`2-bring_me_home`__
+A script that changes the working directory to the user’s home directory
 
-3. __The long format:__
-A script ``3-listfiles`` to display current directory contents in a long format
+3. __`3-listfiles`__
+A script to display current directory contents in a long format
 
 4. __Hidden files:__
 A script ``4-listmorefiles`` to display current directory contents, including hidden files (starting with .). Use the long format.
