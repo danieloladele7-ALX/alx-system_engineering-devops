@@ -1,6 +1,6 @@
 # Bash_Project: Shell commands
 
-This project folder contains some fundamental bash scripts that can be executed directly on the terminal.
+This project folder contains bash scripts with commands that can be executed directly on the terminal.
 
 __Note:__ To make a script executable you would need to use the ``chmod u+x <bash_script>``. To make magic file executable you need to use the ``file -C -m <magic_file>``
 
