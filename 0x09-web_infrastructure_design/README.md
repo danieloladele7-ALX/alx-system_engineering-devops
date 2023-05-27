@@ -18,8 +18,8 @@ $ sudo apt-get install git
 ```
 
 ## :blue_book: Authors
-* **Daniel Oladele** - [@DanielOladele](https://github.com/danieloladele7)
-* **Laby Owolabi** - [@LabyKreative](https://github.com/LabyKreative)
+* **Daniel Oladele** - [GitHub](https://github.com/danieloladele7)
+* **Laby Owolabi** - [GitHub](https://github.com/LabyKreative)
 
 
 ## :mega: Knowledge Source
