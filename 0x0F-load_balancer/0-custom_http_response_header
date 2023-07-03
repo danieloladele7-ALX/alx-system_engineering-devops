@@ -8,7 +8,7 @@
 #+    Contains a custom HTTP header named X-Served-By.
 #+    The value of the HTTP header is the hostname of the running server.
 
-sudo apt-get update -y
+sudo apt-get update
 sudo apt-get install nginx -y
 
 sudo ufw allow 'Nginx HTTP'
