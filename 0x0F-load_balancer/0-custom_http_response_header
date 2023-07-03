@@ -21,21 +21,20 @@ echo "Ceci n'est pas une page" > /var/www/html/404.html
 SERVER_CONFIG=\
 "server {
 	listen 80 default_server;
-	listen [::]:80 default_server;
-	root /var/www/html;
-	index index.html index.htm index.nginx-debian.html;
-	server_name _;
-	add_header X-Served-By \$hostname;
-	location / {
-		try_files \$uri \$uri/ =404;
-	}
-	if (\$uri = /redirect_me){
-		return 301 https://youtube.com;
-	}
-	error_page 404 /404.html;
-	location = /404.html {
-		internal;
-	}
+    listen [::]:80 default_server;
+    add_header X-Served-By $HOSTNAME;
+    root   /var/www/html;
+    index  index.html index.htm;
+
+    location /redirect_me {
+        return 301 http://youtube.com/;
+    }
+
+    error_page 404 /404.html;
+    location /404 {
+      root /var/www/html;
+      internal;
+    }
 }"
 
 echo "$SERVER_CONFIG" > /etc/nginx/sites-enabled/default
