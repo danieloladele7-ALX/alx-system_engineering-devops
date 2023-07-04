@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Connects to server 52.90.23.35 with key in ~/.ssh/school
+# web-02: 54.234.81.27	58428-lb-01:34.224.1.230
+
+read -p "What server do you want to connect to: web-01, web-02, or load_balancer? (01/02/lb): " server_name
+
+if [ "$server_name" == "01" ]; then
+    # connect to server 01
+    ssh -i ~/.ssh/id_rsa ubuntu@52.90.23.35
+elif [ "$server_name" == "02" ]; then
+    # connect to server 02
+    ssh -i ~/.ssh/id_rsa ubuntu@54.234.81.27
+elif [ "$server_name" == "lb" ]; then
+    # connect to load_balancer
+    ssh -i ~/.ssh/id_rsa ubuntu@34.224.1.230
+else
+    echo "Invalid server name entered."
+fi

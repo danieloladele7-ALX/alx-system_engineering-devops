@@ -6,7 +6,7 @@ sudo add-apt-repository -y ppa:vbernat/haproxy-2.4
 sudo apt-get -y install haproxy
 
 # the load balancer's configuration
-DOMAIN_NAME='beta-scribbles.tech'
+DOMAIN_NAME='webcronx.tech'
 INIT_FILE='/etc/default/haproxy'
 CONFIG_FILE='/etc/haproxy/haproxy.cfg'
 HAPROXY_LB_CONFIG=\
@@ -14,8 +14,8 @@ HAPROXY_LB_CONFIG=\
 #--$DOMAIN_NAME-params-begin--
 backend $DOMAIN_NAME-backend
 	balance roundrobin
-	server 914-web-01 52.90.23.35:80 check
-	server 914-web-02 174.129.54.121:80 check
+	server 58428-web-01 52.90.23.35:80 check
+	server 58428-web-02 54.234.81.27:80 check
 frontend $DOMAIN_NAME-frontend
 	bind *:80
 	mode http
