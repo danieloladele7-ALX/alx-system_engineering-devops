@@ -9,7 +9,7 @@
 #+    The value of the HTTP header is the hostname of the running server.
 
 sudo apt-get update
-sudo apt-get install nginx -y
+sudo apt-get -y install nginx
 
 sudo ufw allow 'Nginx HTTP'
 

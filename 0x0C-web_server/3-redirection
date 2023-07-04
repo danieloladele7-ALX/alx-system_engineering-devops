@@ -2,7 +2,7 @@
 # Installs, configures, and starts the server
 
 sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install nginx -y
+sudo apt-get -y install nginx
 
 # set firewall rule for Nginx HTTP
 sudo ufw allow 'Nginx HTTP'
