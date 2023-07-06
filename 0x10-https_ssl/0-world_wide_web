@@ -1,22 +1,27 @@
 #!/usr/bin/env bash
-# Configure domains and subdomains:
+# Configure webcronx.tech, subdomains to point to IP:
 # www 		--> 58428-lb-01 34.224.1.230
 # web-01 	--> 58428-web-01 52.90.23.35
 # web-02 	--> 58428-web-02 54.234.81.27
 
 # define params
-domain_information () {
-    line=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
-    echo "$2 $line" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+subdomains_all=( "www" "lb-01" "web-01" "web-02" )
+
+get_domain_information () {
+    subdomain=$1
+    domain=$2
+
+    dig "$subdomain.$domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v s="$subdomain" 'BEGIN { FS = " " } ; { print "The subdomain " s " is a " $4 " record and points to " $5 }'
 }
 
-if [ "$#" == 1 ]
-then
-  domain_information "$1" "www"
-  domain_information "$1" "lb-01"
-  domain_information "$1" "web-01"
-  domain_information "$1" "web-02"
-elif [ "$#" == 2 ]
-then
-  domain_information "$1" "$2"
+if [ $# -eq 1 ]; then
+    domain="$1"
+    for i in "${subdomains_all[@]}"
+    do
+	get_domain_information "$i" "$domain"
+    done
+elif [ $# -eq 2 ]; then
+    domain="$1"
+    subdomain="$2"
+    get_domain_information "$subdomain" "$domain"
 fi
