@@ -28,6 +28,7 @@ sudo apt-cache policy mysql-server
 
 - Confirm its installed: `mysql --version`.
 
+# NOTE: Task 2-3 are for `web-01` only.
 ## Task 1:
 ```
 sudo mysql
@@ -54,3 +55,15 @@ GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';
 GRANT SELECT ON mysql.user TO 'holberton_user'@'localhost';
 FLUSH PRIVILEGES;
 ```
+
+## Task 4: 
+- Link:
+    - Prerequisite: [Initial Server Setup with Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04)
+    - [How To Set Up Replication in MySQL](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
+- ALLOWING `source-web-01` port 3306 to SEE `replica-web-02` IP: `sudo ufw allow from 54.208.255.120 to any port 3306`
+- Configuring Source `sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf`.
+    - `bind-address`: This step is skipped for task 4, as required.
+    - Uncomment `server-id` and set Source to `1`, replica (*on replica server*) to `2`
+    - Uncomment the `log_bin = ...` line.
+    - Uncomment and Specify DB to replicate: `binlog_do_db          = include_database_name`
+- restart mysql `sudo systemctl restart mysql`
