@@ -1,3 +1,5 @@
+# task 1 and 2: install certbot on loadbalancer and redirect http to https permanently
+
 ## Steps:
 - [blog post for loadbalancer](https://medium.com/swlh/tutorial-to-configure-ssl-in-a-haproxy-load-balancer-b452d1be100f)
 - [http to https](https://www.haproxy.com/blog/redirect-http-to-https-with-haproxy)
@@ -47,7 +49,7 @@ MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0waw...
 -----END PRIVATE KEY-----
 ```
 
-- configure your `/etc/haproxy.haproxy.cfg` to see port `443` and redirect all `http to https`.
+- configure your `/etc/haproxy/haproxy.cfg` to see port `443` and redirect all `http to https`.
 
 - Start haproxy if not started, and restart after making any changes.
 

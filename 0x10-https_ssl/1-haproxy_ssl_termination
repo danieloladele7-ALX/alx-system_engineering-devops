@@ -36,7 +36,7 @@ defaults
 #--webcronx.tech-params-begin--
 backend webcronx.tech-backend
         balance roundrobin
-        server 58428-web-01 54.221.184.73:80 check
+        server 58428-web-01 54.164.52.24:80 check
         server 58428-web-02 54.208.255.120:80 check
 frontend webcronx.tech-frontend
         mode http

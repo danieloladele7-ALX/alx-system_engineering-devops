@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Configure webcronx.tech, subdomains to point to IP:
-# www 		--> 58428-lb-01  54.221.184.73
+# www 		--> 58428-lb-01  54.164.52.24
 # web-01 	--> 58428-web-01 54.208.255.120
 # web-02 	--> 58428-web-02 52.201.211.133
 
