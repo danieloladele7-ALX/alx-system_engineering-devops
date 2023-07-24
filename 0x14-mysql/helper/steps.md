@@ -30,6 +30,8 @@ sudo apt-cache policy mysql-server
 
 # NOTE: Task 2-3 are for `web-01` only.
 ## Task 1:
+password: projectcorrection280hbtn
+
 ```
 sudo mysql
 GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost' IDENTIFIED BY 'projectcorrection280hbtn';
@@ -67,3 +69,14 @@ FLUSH PRIVILEGES;
     - Uncomment the `log_bin = ...` line.
     - Uncomment and Specify DB to replicate: `binlog_do_db          = include_database_name`
 - restart mysql `sudo systemctl restart mysql`
+- continue steps as stated [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql). Note: Changing Source for MySQL vr 5.7 is:
+    ```
+    CHANGE MASTER TO
+    MASTER_HOST='54.164.52.24',
+    MASTER_USER='replica_user',
+    MASTER_PASSWORD='projectcorrection280hbtn',
+    MASTER_LOG_FILE='mysql-bin.000001',
+    MASTER_LOG_POS=154;
+
+    START SLAVE;
+    ```
