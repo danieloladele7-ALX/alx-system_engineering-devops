@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Creates RSA key pair
+# generate key: ssh-keygen -t rsa -C "danieloladele7@gmail.com.com"
 
 ssh-keygen -b 4096 -f school -t rsa -N betty

@@ -6,6 +6,7 @@
 # - The username scp connects with
 # - The path to the SSH private key that scp uses
 # scp must transfer the file to the user home directory ~/
+# generate key: ssh-keygen -t rsa -C "danieloladele7@gmail.com.com"
 if [ $# -lt 3 ];
 then
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY";
