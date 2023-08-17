@@ -16,3 +16,9 @@ run `sudo lsof -i :5000` to see the running process on `port:5000`
 
 ## Task 1:
 - `sudo pip3 install gunicorn` and ensure nothing is on `port:6000`
+
+## Task 2:
+
+## Task 3:
+- check that `port:5001` is free.
+- I rerouted `dd-agent` `cmd_port` to `port:5004`
