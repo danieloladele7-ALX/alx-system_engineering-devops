@@ -4,10 +4,7 @@ server {
 		listen 80 default_server;
         listen [::]:80 default_server ipv6only=on;
 
-        # Use IP of server as domain name
-    	server_name 54.164.52.24;
-	
-		# Customize HTTP response header
+        # Customize HTTP response header
 		add_header X-Served-By 58428-web-01;
 
         root   /var/www/html;
@@ -19,7 +16,7 @@ server {
         }
 
         # Serve /number_odd_or_even/ route on AirBnB_clone_v2
-        location /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+        location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
             proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
         }
 
