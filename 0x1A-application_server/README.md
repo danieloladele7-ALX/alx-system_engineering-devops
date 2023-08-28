@@ -19,3 +19,7 @@ Your web infrastructure is already serving web pages via `Nginx` that you instal
 + The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`
 + The second line of all your Bash scripts should be a comment explaining what is the script doing
 
+### Resources
+- [Understanding Nginx Server and Location Block Selection Algorithms](https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms#matching-location-blocks)
+- [Understanding nginx location blocks and rewrite rules](http://blog.pixelastic.com/2013/09/27/understanding-nginx-location-blocks-rewrite-rules/)
+- [NGINX Reverse Proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#)
